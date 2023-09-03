@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-nav">
+
+            <a class="nav-link active" href="{% url 'home' %}"> Home</a>
+            <a class="nav-link active" href="{% url 'login' %}">Login </a>
+            <a class="nav-link active" href="{% url 'logout' %}"> LogOut</a>
+            <a class="nav-link active" href="{% url 'create_user' %}"> Create User</a>
+            <a class="nav-link active" href="{% url 'delete_user' %}"> Delete User</a>
+
+
+        </div>
+
+    </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-dark mt-3">Create User Page</h1>
+        <form method="post" class="mx-auto w-50 mt-5">
+            <div class="form-group">
+                <label for="new_username" class="text-light">UserName:</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Enter Username">
+            </div>
+            <div class="form-group">
+                <label for="new_password" class="text-light">Password:</label>
+                <input type="text" id="password" name="password" class="form-control" placeholder="Enter Password">
+            </div>
+            <button type="submit" class="btn btn-outline-primary mt-2">Create</button>
+        </form>
+    </div>
+</body>
+</html>
